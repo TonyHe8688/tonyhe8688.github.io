@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Tony He Embedded Systems Lab</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="/embedded-linux/">Embedded Linux</a>
+        <a href="/android-sbc/">Android SBC</a>
+        <a href="/display-integration/">Display</a>
+        <a href="/hmi-development/">HMI</a>
+        <a href="/projects/">Projects</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="site-footer">
+      <p>Technical notes by Tony He on embedded systems, display integration, and industrial HMI development.</p>
+    </footer>
+  </body>
+</html>

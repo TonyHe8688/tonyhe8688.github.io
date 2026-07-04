@@ -1,0 +1,20 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="eyebrow">Embedded Linux / Android SBC / Display / HMI</p>
+  <h1>Tony He Embedded Systems Lab</h1>
+  <p class="lede">Field notes on board bring-up, Linux and Android systems, display interfaces, touch panels, and industrial HMI software.</p>
+</section>
+
+<section class="section">
+  <h2>Technical Areas</h2>
+  <div class="topic-grid">
+    {{ range where .Site.RegularPages "Section" "in" (slice "embedded-linux" "android-sbc" "display-integration" "hmi-development" "sbc-customization") }}
+      <article class="topic-card">
+        <p class="topic-section">{{ .Section | humanize }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Description }}</p>
+      </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
