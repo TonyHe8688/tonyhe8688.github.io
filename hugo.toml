@@ -2,7 +2,6 @@ baseURL = "https://tonyhe8688.github.io/"
 languageCode = "en-us"
 title = "Tony He Embedded Systems Lab"
 enableRobotsTXT = true
-cacheDir = "/Users/kevin/kevindoc/github/tonyhe8688.github.io/.hugo_cache"
 
 [params]
   description = "Embedded Linux, Android SBC, display integration, and industrial HMI notes by Tony He."
