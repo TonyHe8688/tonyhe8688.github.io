@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Thermal Design for Enclosed SBCs</title>
+  <desc id="desc">A simplified engineering flow diagram for Thermal Design for Enclosed SBCs.</desc>
+  <rect width="960" height="420" fill="#f7f8f5"/>
+  <style>
+    .box{fill:#fff;stroke:#d9ded8;stroke-width:2}
+    .title{font:700 28px sans-serif;fill:#1f2522}
+    .small{font:16px sans-serif;fill:#1f2522}
+    .note{font:16px sans-serif;fill:#5b6661}
+    .wire{stroke:#166a5b;stroke-width:4;fill:none;marker-end:url(#arrow)}
+  </style>
+  <defs><marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M2,2 L10,6 L2,10 Z" fill="#166a5b"/></marker></defs>
+  <text class="title" x="58" y="82">Thermal Design for Enclosed SBCs</text>
+  <text class="note" x="60" y="118">Review the hardware path, software binding, validation method, and production behavior together.</text>
+  <rect class="box" x="60" y="150" width="130" height="86" rx="8"/><text class="small" x="78" y="198">Heat source</text><path class="wire" d="M190 193 H228"/><rect class="box" x="230" y="150" width="130" height="86" rx="8"/><text class="small" x="248" y="198">Copper</text><path class="wire" d="M360 193 H398"/><rect class="box" x="400" y="150" width="130" height="86" rx="8"/><text class="small" x="418" y="198">Enclosure</text><path class="wire" d="M530 193 H568"/><rect class="box" x="570" y="150" width="130" height="86" rx="8"/><text class="small" x="588" y="198">Load test</text><path class="wire" d="M700 193 H738"/><rect class="box" x="740" y="150" width="130" height="86" rx="8"/><text class="small" x="758" y="198">Throttle</text>
+  <rect x="60" y="292" width="820" height="58" rx="8" fill="#fff8f3" stroke="#b55228" stroke-width="2"/>
+  <text class="note" x="88" y="327">A reliable product test should record board revision, firmware build, result, and failure evidence.</text>
+</svg>
