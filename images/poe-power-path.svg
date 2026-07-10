@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">PoE power path for an embedded SBC</title>
+  <desc id="desc">A simplified block diagram showing Ethernet cable, protection, PoE PD controller, isolated DC DC converter, system rails, and Linux SBC loads.</desc>
+  <rect width="960" height="420" fill="#f7f8f5"/>
+  <style>
+    .box{fill:#fff;stroke:#d9ded8;stroke-width:2;rx:8}
+    .label{font:700 22px sans-serif;fill:#1f2522}
+    .small{font:16px sans-serif;fill:#5b6661}
+    .wire{stroke:#166a5b;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    .rail{stroke:#b55228;stroke-width:4;fill:none;marker-end:url(#arrow2)}
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#166a5b"/>
+    </marker>
+    <marker id="arrow2" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#b55228"/>
+    </marker>
+  </defs>
+  <rect class="box" x="32" y="138" width="130" height="96"/>
+  <text class="label" x="63" y="178">RJ45</text>
+  <text class="small" x="55" y="205">PoE cable</text>
+  <path class="wire" d="M162 186 H250"/>
+  <rect class="box" x="250" y="122" width="150" height="128"/>
+  <text class="label" x="280" y="166">Ethernet</text>
+  <text class="small" x="279" y="196">magnetics</text>
+  <text class="small" x="278" y="220">and ESD</text>
+  <path class="wire" d="M400 186 H494"/>
+  <rect class="box" x="494" y="122" width="154" height="128"/>
+  <text class="label" x="525" y="166">PoE PD</text>
+  <text class="small" x="520" y="196">detection</text>
+  <text class="small" x="516" y="220">classification</text>
+  <path class="rail" d="M648 186 H738"/>
+  <rect class="box" x="738" y="122" width="174" height="128"/>
+  <text class="label" x="765" y="166">DC/DC</text>
+  <text class="small" x="760" y="196">isolated or</text>
+  <text class="small" x="759" y="220">non-isolated</text>
+  <path class="rail" d="M825 250 V316"/>
+  <rect class="box" x="650" y="316" width="262" height="70"/>
+  <text class="label" x="679" y="358">5 V / 12 V system rails</text>
+  <path class="rail" d="M650 351 H500"/>
+  <rect class="box" x="302" y="306" width="198" height="92"/>
+  <text class="label" x="337" y="346">Linux SBC</text>
+  <text class="small" x="329" y="374">CPU, display, USB</text>
+  <text class="small" x="54" y="58">Power and data share one connector, but board validation must treat them as separate paths.</text>
+</svg>

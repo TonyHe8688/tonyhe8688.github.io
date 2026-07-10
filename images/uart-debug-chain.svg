@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">UART debug chain for embedded board bring-up</title>
+  <desc id="desc">A diagram showing an embedded board connected through TX RX GND to a USB UART adapter and a host terminal.</desc>
+  <rect width="960" height="420" fill="#f7f8f5"/>
+  <style>
+    .box{fill:#fff;stroke:#d9ded8;stroke-width:2}
+    .label{font:700 22px sans-serif;fill:#1f2522}
+    .small{font:16px sans-serif;fill:#5b6661}
+    .pin{font:700 18px monospace;fill:#166a5b}
+    .wire{stroke:#166a5b;stroke-width:4;fill:none}
+    .gnd{stroke:#5b6661;stroke-width:4;fill:none}
+    .warn{fill:#fff8f3;stroke:#b55228;stroke-width:2}
+  </style>
+  <rect class="box" x="44" y="94" width="250" height="230" rx="8"/>
+  <text class="label" x="84" y="140">Embedded board</text>
+  <text class="small" x="84" y="170">SoC UART console</text>
+  <text class="pin" x="94" y="226">TX</text>
+  <text class="pin" x="94" y="264">RX</text>
+  <text class="pin" x="94" y="302">GND</text>
+  <circle cx="152" cy="220" r="7" fill="#166a5b"/>
+  <circle cx="152" cy="258" r="7" fill="#166a5b"/>
+  <circle cx="152" cy="296" r="7" fill="#5b6661"/>
+  <rect class="box" x="374" y="120" width="220" height="180" rx="8"/>
+  <text class="label" x="407" y="166">USB UART</text>
+  <text class="small" x="417" y="196">1.8 V / 3.3 V</text>
+  <text class="small" x="412" y="222">logic adapter</text>
+  <circle cx="374" cy="190" r="7" fill="#166a5b"/>
+  <circle cx="374" cy="228" r="7" fill="#166a5b"/>
+  <circle cx="374" cy="266" r="7" fill="#5b6661"/>
+  <path class="wire" d="M152 220 C230 220, 280 190, 374 190"/>
+  <path class="wire" d="M152 258 C230 258, 280 228, 374 228"/>
+  <path class="gnd" d="M152 296 C230 296, 280 266, 374 266"/>
+  <text class="small" x="206" y="206">board TX to adapter RX</text>
+  <text class="small" x="207" y="246">board RX to adapter TX</text>
+  <text class="small" x="232" y="310">shared ground</text>
+  <rect class="box" x="674" y="104" width="240" height="210" rx="8"/>
+  <text class="label" x="732" y="150">Host PC</text>
+  <text class="small" x="718" y="184">terminal program</text>
+  <text class="small" x="712" y="214">115200 8N1 logs</text>
+  <path class="wire" d="M594 210 H674"/>
+  <rect class="warn" x="92" y="350" width="776" height="44" rx="8"/>
+  <text class="small" x="122" y="378">Do not connect RS232 voltage directly to logic UART pins. Confirm voltage level before wiring.</text>
+</svg>
